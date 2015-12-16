@@ -1,5 +1,6 @@
 package heartControl;
 
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -37,13 +38,17 @@ public class heartControl {
 	//Finally fire up the network manager so the mod will use it's own channel 
 	public static final SimpleNetworkWrapper packetHandler = NetworkRegistry.INSTANCE.newSimpleChannel(modID);
 	
+	public static configHandler config; 
 	
 	@Mod.EventHandler 
 	public void preIniit(FMLPreInitializationEvent event)
 	{
 		//Get the Configuration File 
-		configHandler.init(event.getSuggestedConfigurationFile());
-		
+		instance = this; 
+		FMLLog.info("[Heart Control] Starting pre-initalization phase"); 
+		FMLLog.info("[Heart Control] Generating Configuration File" );
+		config.init(event.getSuggestedConfigurationFile());
+		FMLLog.info("[Heart Control] Configuration File Created");
 	}
 	
 	@Mod.EventHandler
