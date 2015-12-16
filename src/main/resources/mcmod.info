@@ -1,0 +1,16 @@
+[
+{
+  "modid": "heartControl",
+  "name": "Heart Control",
+  "description": "A mod to allow control of the Health of the player in a balanced way",
+  "version": "0.1.0",
+  "mcversion": "${1.7.10}",
+  "url": "https://github.com/fullphaser/Heart-Control",
+  "updateUrl": "",
+  "authorList": ["Alnarra"],
+  "credits": "Credits to DarkxElocius of Difficult life for the idea",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
