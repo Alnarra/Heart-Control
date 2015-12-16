@@ -2,15 +2,15 @@ package heartControl.core;
 
 import heartControl.config.configHandler;
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
 
 public class heartLogic {
 
-	public static void attemptHeartAdd(int id)
+	public static void attemptHeartAdd(int id, EntityPlayer player)
 	{
-		Minecraft mc = Minecraft.getMinecraft();
 		
 		//First let's find out how much health the player has right now at this very moment 
-		float playerHealth = mc.thePlayer.getHealth();
+		float playerHealth = player.getMaxHealth(); 
 		
 		//This is going to be how we figure out if we should actually give more health UNLESS the tier system is turned off
 		//0 = Base Heart

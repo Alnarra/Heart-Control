@@ -11,6 +11,7 @@ import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import heartControl.config.configHandler;
 import heartControl.items.hcItems;
 import heartControl.network.commonProxy;
+import heartControl.utility.hcLogger; 
 
 //Publish This for Minecraft's sake so it knows what it's looking at
 @Mod( 
@@ -46,13 +47,11 @@ public class heartControl {
 	{
 		//Get the Configuration File 
 		instance = this; 
-		FMLLog.info("[Heart Control] Starting pre-initalization phase"); 
-		FMLLog.info("[Heart Control] Generating Configuration File" );
 		config.init(event.getSuggestedConfigurationFile());
-		FMLLog.info("[Heart Control] Configuration File Created");
-		FMLLog.info("[Heart Control] Adding Items");
+		hcLogger.logger("Configuration File Created");
+		hcLogger.logger("Adding Items");
 		hcItems.init();
-		FMLLog.info("[Heart Control] Items Added");
+		hcLogger.logger("Items Added");
 	}
 	
 	@Mod.EventHandler

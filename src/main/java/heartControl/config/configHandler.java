@@ -85,7 +85,7 @@ public class configHandler {
 	
 		//Chest 
 		lootSpawnChest = config.getBoolean("lootSpawnChest", configHandler.CATEGORY_CHEST, true, "If you wish to allow for hearts to spawn in chest");
-		chanceSpawnChest = config.getInt("chanceSpawnChest", configHandler.CATEGORY_CHEST, 1000, 1, 100000, "Chance of a chest containing a heart");
+		chanceSpawnChest = config.getInt("chanceSpawnChest", configHandler.CATEGORY_CHEST, 1, 1, 100000, "Chance of a chest containing a heart");
 		minNumberSpawnChest = config.getInt("minDropChest", configHandler.CATEGORY_CHEST, 1, 1, 100, "If a chest does contain a heart, how many will it contain at minimum");
 		maxNumberSpawnChest = config.getInt("maxDropChest", configHandler.CATEGORY_CHEST, 1, 1, 100, "If a chest does contain a heart, how many will it contain at maximum");
 		
