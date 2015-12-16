@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class diamondHeart extends Item{
+	
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
 	{
 		//make sure we're actually Client Side here

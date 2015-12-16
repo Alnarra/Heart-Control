@@ -19,6 +19,7 @@ public class configHandler {
 	public static int startingHealth; 
 	public static int maxHealth;
 	public static boolean enableHeartRecipie; 
+	public static boolean enableDebug; 
 	
 	public static boolean lootGeneralHostileMobs;
 	public static int chanceHostileMobs;
@@ -60,6 +61,7 @@ public class configHandler {
 		startingHealth = config.getInt("startingHealth", configHandler.CATEGORY_GENERAL, 20, 1, 999, "The Starting HP A player will start with, remember that 1 Heart = 2 HP");
 		maxHealth = config.getInt("maxHealth", configHandler.CATEGORY_GENERAL, 100, 1, 999, "The Max Health a Player Can Have. Initial Value is after final tiered hearts");
 		enableHeartRecipie = config.getBoolean("enableCratableHeart", configHandler.CATEGORY_GENERAL, false, "Enable a craftable recipie for the hearts");
+		enableDebug = config.getBoolean("enableDebug", configHandler.CATEGORY_GENERAL, true, "Enable Console Debugging?");
 		
 		//Hostile Mob Settings
 		lootGeneralHostileMobs = config.getBoolean("lootGeneralHostileMobs", configHandler.CATEGORY_HOSTILE, true, "If Hearts drop from 'Ordinary' Mobs such as Skeletons, Creepers, Wither Skeletons, etc. Including Modded Creatures. "); 

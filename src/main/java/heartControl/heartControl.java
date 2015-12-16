@@ -9,6 +9,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import heartControl.config.configHandler;
+import heartControl.items.hcItems;
 import heartControl.network.commonProxy;
 
 //Publish This for Minecraft's sake so it knows what it's looking at
@@ -49,6 +50,9 @@ public class heartControl {
 		FMLLog.info("[Heart Control] Generating Configuration File" );
 		config.init(event.getSuggestedConfigurationFile());
 		FMLLog.info("[Heart Control] Configuration File Created");
+		FMLLog.info("[Heart Control] Adding Items");
+		hcItems.init();
+		FMLLog.info("[Heart Control] Items Added");
 	}
 	
 	@Mod.EventHandler
