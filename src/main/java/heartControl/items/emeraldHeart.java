@@ -1,5 +1,6 @@
 package heartControl.items;
 
+import heartControl.core.heartLogic;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,7 +12,7 @@ public class emeraldHeart extends Item{
 		//make sure we're actually Client Side here
 		if(!world.isRemote)
 		{
-			heartControl.core.heartLogic.attemptHeartAdd(2);
+			heartLogic.attemptHeartAdd(2);
 			player.inventory.decrStackSize(player.inventory.currentItem, 1); 
 		}
 		return stack; 

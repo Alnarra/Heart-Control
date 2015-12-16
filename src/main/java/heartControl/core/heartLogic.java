@@ -33,6 +33,7 @@ public class heartLogic {
 				//This is a base heart 
 				if(playerHealth < 20)
 				{
+					// They have less then 20 Health we want to ADD health 
 					
 				}
 			}	

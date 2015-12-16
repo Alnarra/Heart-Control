@@ -20,6 +20,7 @@ public class configHandler {
 	public static int maxHealth;
 	public static boolean enableHeartRecipie; 
 	public static boolean enableDebug; 
+	public static boolean enableExtraEffects; 
 	
 	public static boolean lootGeneralHostileMobs;
 	public static int chanceHostileMobs;
@@ -62,6 +63,7 @@ public class configHandler {
 		maxHealth = config.getInt("maxHealth", configHandler.CATEGORY_GENERAL, 100, 1, 999, "The Max Health a Player Can Have. Initial Value is after final tiered hearts");
 		enableHeartRecipie = config.getBoolean("enableCratableHeart", configHandler.CATEGORY_GENERAL, false, "Enable a craftable recipie for the hearts");
 		enableDebug = config.getBoolean("enableDebug", configHandler.CATEGORY_GENERAL, true, "Enable Console Debugging?");
+		enableExtraEffects = config.getBoolean("enableExtraEffects", configHandler.CATEGORY_GENERAL, true, "Enable or Disable the Effects that the Hearts have when consumed");
 		
 		//Hostile Mob Settings
 		lootGeneralHostileMobs = config.getBoolean("lootGeneralHostileMobs", configHandler.CATEGORY_HOSTILE, true, "If Hearts drop from 'Ordinary' Mobs such as Skeletons, Creepers, Wither Skeletons, etc. Including Modded Creatures. "); 

@@ -1,6 +1,7 @@
 package heartControl.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import heartControl.heartControl;
@@ -25,7 +26,7 @@ public class hcItems {
 		ironHeart = new ironHeart().setTextureName(heartControl.modID + ":ironHeart").setUnlocalizedName("hc.ironHeart").setCreativeTab(CreativeTabs.tabMisc);
 		emeraldHeart = new emeraldHeart().setTextureName(heartControl.modID + ":emeraldHeart").setUnlocalizedName("hc.emeraldHeart").setCreativeTab(CreativeTabs.tabMisc);
 		diamondHeart = new diamondHeart().setTextureName(heartControl.modID + ":diamondHeart").setUnlocalizedName("hc.diamondHeart").setCreativeTab(CreativeTabs.tabMisc); 
-		netherStarHeart = new netherStarHeart().setTextureName(heartControl.modID + ":netherStarHeart").setUnlocalizedName("hc.netherStarHeart").setCreativeTab(CreativeTabs.tabMisc); 
+		netherStarHeart = new netherStarHeart().setTextureName(heartControl.modID + ":netherStarHeart").setUnlocalizedName("hc.netherStarHeart").setCreativeTab(CreativeTabs.tabMisc);
 		
 		//Register the Items
 		GameRegistry.registerItem(baseHeart, "hc.BaseHeart");
