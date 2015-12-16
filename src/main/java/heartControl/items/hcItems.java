@@ -1,11 +1,7 @@
 package heartControl.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import heartControl.heartControl;
-import net.minecraft.creativetab.CreativeTabs;
+import heartControl.config.configHandler;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
@@ -61,8 +57,22 @@ public class hcItems {
 			"NNN",
 			"NBN",
 			"NNN",
-			'N',"nether_star",
+			'N',GameRegistry.findItem("minecraft", "nether_star"),
 			'B',"heartCanisterDiamond"
 			}));
+		
+		//Turn on the baseHeart Recipe if it's in the config to do so 
+		if(configHandler.enableHeartRecipie == true)
+		{
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(baseHeart), new Object[]{
+				"EDE",
+				"NCN",
+				"EDE",
+				'E', "gemEmerald", 
+				'D', "gemDiamond",
+				'N', GameRegistry.findItem("minecraft", "nether_star"),
+				'C', GameRegistry.findItem("minecraft", "beef")
+			}));
+		}
 	}
 }
