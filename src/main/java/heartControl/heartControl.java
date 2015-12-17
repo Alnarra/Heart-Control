@@ -1,6 +1,5 @@
 package heartControl;
 
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -9,9 +8,11 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import heartControl.config.configHandler;
+import heartControl.core.mobDrop;
 import heartControl.items.hcItems;
 import heartControl.network.commonProxy;
-import heartControl.utility.hcLogger; 
+import heartControl.utility.hcLogger;
+import net.minecraftforge.common.MinecraftForge; 
 
 //Publish This for Minecraft's sake so it knows what it's looking at
 @Mod( 
@@ -52,6 +53,8 @@ public class heartControl {
 		hcLogger.logger("Adding Items");
 		hcItems.init();
 		hcLogger.logger("Items Added");
+		hcLogger.logger("Setting up Mob Drops");
+		MinecraftForge.EVENT_BUS.register(new mobDrop());
 	}
 	
 	@Mod.EventHandler

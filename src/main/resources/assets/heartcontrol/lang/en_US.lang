@@ -1,6 +1,6 @@
 # ITEMS
-item.hc.baseHeart.name=Beating Heart
-item.hc.ironHeart.name=Iron Wrapped Heart
-item.hc.emeraldHeart.name=Emerald Gilded Heart
-item.hc.diamondHeart.name=Diamond Shielded Heart
-item.hc.netherStarHeart.name=Power Warped Heart
+item.hc.heart:0.name=Beating Heart
+item.hc.heart:1.name=Iron Wrapped Heart
+item.hc.heart:2.name=Emerald Gilded Heart
+item.hc.heart:3.name=Diamond Shielded Heart
+item.hc.heart:4.name=Power Warped Heart
