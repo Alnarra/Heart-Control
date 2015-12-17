@@ -34,7 +34,7 @@ public class mobDrop {
 		{
 			//split it up
 		}
-		//Check the Laslist too
+		//Check the blacklist too
 		for (int i = 0; i < blackListMobs.length; i++)
 		{
 			
